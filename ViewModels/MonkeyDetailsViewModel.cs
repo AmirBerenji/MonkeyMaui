@@ -18,6 +18,5 @@ namespace TestProject.ViewModels
         }
         [ObservableProperty]
         Monkey monkey;
-
     }
 }
