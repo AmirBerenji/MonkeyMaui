@@ -1,5 +1,6 @@
 ﻿
 using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,11 @@ namespace TestProject.ViewModels
         }
         [ObservableProperty]
         Monkey monkey;
+
+        [ICommand]
+        async Task GoBackAsync()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
     }
 }
